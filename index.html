@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  ~ @copyright (c) 2017, Philipp Thuerwaechter & Pattrick Hueper
+  ~ @copyright (c) 2017 to present, Philipp Thuerwaechter & Pattrick Hueper
   ~ @license BSD-3-Clause (see LICENSE.md in the root directory of this source tree)
   -->
 
@@ -11,19 +11,8 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="bundle.css">
     <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
-    <script src="//cdn.jsdelivr.net/npm/@js-joda/core@4.1.0/dist/js-joda.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@js-joda/extra@0.4.0/dist/js-joda-extra.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@js-joda/timezone@2.6.0/dist/js-joda-timezone.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@js-joda/locale@4.1.0/dist/prebuilt/en-us/index.js"></script>
     <script>
-      // copy all js-joda classes to the global scope
-      var jsJoda = JSJoda;
-      for(var prop in jsJoda) { window[prop] = jsJoda[prop]; }
-
-      console.log("Welcome to js-joda at '"+ LocalDateTime.now().toString() + "' local time.");
-      console.log("An example with @js-joda/timezone: Its '"+ LocalDateTime.now().atZone(ZoneId.systemDefault()).toString() + "' system default timezone.");
-      console.log("An example with @js-joda/extra: Interval of 1 minute '"+ JSJodaExtra.Interval.of(Instant.now(), Duration.ofMinutes(1)).toString() + ".");
-      console.log("An example with @js-joda/local: ZonedDateTime with locale format en-us '"+ JSJoda.ZonedDateTime.of(2017, 1, 1, 0, 0, 0, 0, JSJoda.ZoneId.of('Europe/Berlin')).format(JSJoda.DateTimeFormatter.ofPattern('eeee MMMM dd yyyy GGGG, hh:mm:ss a zzzz, zz, OOOO \'Week: \' ww, \'Quarter: \' QQQ').withLocale(JSJodaLocale.Locale.US)) + ".");
+      console.log("Welcome to js-joda. You can test the library in the browser console at https://js-joda.github.io/js-joda/");
     </script>
 </head>
 <body>
